@@ -1,38 +1,310 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Inter", "Space Mono", sans-serif, serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --purple: #a445ed;
+  --red: #ff5252;
+  --grey: #757575;
+  --light-grey: #e9e9e9;
+  --white: #ffffff;
+  --off-white: #f4f4f4;
+  --dm-body-bg: #050505;
+  --dm-form-bg: #1f1f1f;
 }
 
-.App-header {
-  background-color: #282c34;
+.appContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.appContainer.dark {
+  background-color: var(--dm-body-bg) !important;
+}
+
+.appWrapper {
+  width: 90%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-height: fit-content;
+  margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.navWrapper {
+  width: 100% !important;
+  height: fit-content !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.iconContainer {
+  width: 50% !important;
+  height: fit-content !important;
+  /* border: 1px solid #000; */
+}
+
+.bookIcon {
+  width: 2rem !important;
+  height: 2.28rem !important;
+}
+
+.rightNav {
+  width: fit-content !important;
+  height: fit-content !important;
+}
+
+.searchIcon {
+  cursor: pointer;
+}
+
+.fontSelect {
+  width: 56% !important;
+  height: fit-content !important;
+  font-family: Inter;
+  font-size: 1.125rem !important;
+  color: #2d2d2d !important;
+  line-height: 1.5rem !important;
+  font-weight: 700 !important;
+  /* border-radius: 1rem !important; */
+  border: none !important;
+  /* border-radius: 1rem !important; */
+}
+
+/* .fontSelect.dark {
+  box-shadow: 0px 5px 30px 0px #A445ED;
+} */
+
+.select.dark {
+  background-color: var(--dm-body-bg) !important;
+  color: var(--white) !important;
+  border: none !important;
+}
+
+.vLine {
+  margin-right: 0.625rem !important;
+  margin-left: 0.5rem !important;
+  width: 0.0625rem !important;
+}
+
+.vLine.dark {
+  color: var(--light-grey) !important;
+}
+
+.toggleContainer {
+  width: 35% !important;
+  height: fit-content !important;
+  cursor: pointer;
+}
+
+.toggleButton {
+  width: 2.2rem !important;
+  height: 1rem !important;
+  background-color: var(--grey) !important;
+  border-radius: 0.5rem !important;
+}
+
+.toggleButton.dark {
+  background-color: var(--purple) !important;
+  padding-left: 1.2rem !important;
+}
+
+.moon.dark {
+  color: var(--purple) !important;
+}
+
+.formWrapper {
+  background-color: var(--off-white);
+  border-radius: 1rem !important;
+  width: 100% !important;
+  height: 4rem !important;
+}
+
+.formWrapper:focus {
+  outline: var(--purple) !important;
+}
+
+.formWrapper.dark {
+  background-color: var(--dm-form-bg) !important;
+}
+
+.formInput {
+  background-color: var(--off-white) !important;
+  outline: none !important;
+}
+
+input[type="text"] {
+  font-size: 1rem !important;
+}
+
+input[type="text"]:focus-within {
+  outline: none !important;
+  border: none !important;
+}
+
+.formInput.dark {
+  background-color: var(--dm-form-bg) !important;
+  color: var(--white) !important;
+}
+
+.formInput::placeholder {
+  font-family: Inter !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: var(--grey) !important;
+}
+
+.title {
+  font-family: Inter !important;
+  font-size: 2rem !important;
+  font-weight: 700;
+}
+
+.title.dark {
+  color: var(--white);
+}
+
+.lexi {
+  font-size: 1.125rem !important;
+  color: var(--purple) !important;
+}
+
+.playButton {
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 50% !important;
+  background-color: #ebccff !important;
+}
+
+.playButton.dark {
+  background-color: var(--purple) !important;
+}
+
+.playButtonCenter {
+  color: var(--purple);
+}
+
+.playButtonCenter.dark {
+  color: #cc80ff;
+}
+
+.source {
+  font-family: Inter !important;
+  font-size: 0.88rem !important;
+  color: var(--grey) !important;
+}
+
+.meaning {
+  font-family: Inter !important;
+  font-size: 1rem !important;
+  color: var(--grey) !important;
+}
+
+.syno {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: var(--purple);
+}
+
+.subTitle {
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+  font-style: italic;
+  color: #2d2d2d;
+}
+
+.list.dark {
+  color: var(--purple);
+}
+
+.listList {
+  font-size: 0.94rem !important;
+}
+
+.listList.dark {
+  color: var(--white) !important;
+}
+
+.subTitle.dark {
+  color: var(--white);
+}
+
+.verbKeyboarding {
+  margin-left: 1.7rem !important;
+  color: var(--grey) !important;
+}
+
+.bottomLink {
+  font-family: Inter !important;
+  font-size: 0.88rem !important;
+  text-decoration: underline;
+}
+
+.bottomLink.dark {
+  color: var(--white);
+  text-decoration-color: var(--grey);
+}
+
+.loading {
+  text-align: center !important;
+  margin-top: 5rem !important;
+}
+
+.loading.dark {
+  color: var(--white);
+}
+
+.line {
+  width: 90% !important;
+  padding-left: 0.5rem;
+}
+
+.errorMessage.dark {
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .appWrapper {
+    width: 50%;
+    min-height: 100vh;
+    max-height: fit-content;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navWrapper {
+    width: 100% !important;
+    height: fit-content !important;
+  }
+
+  .title {
+    font-size: 4rem !important;
+  }
+
+  .lexi {
+    font-size: 1.5rem !important;
+  }
+
+  .playButton {
+    width: 4.69rem !important;
+    height: 4.69rem !important;
+  }
+
+  .subTitle {
+    font-size: 1.5rem !important;
+  }
+
+  .syno {
+    font-size: 1.25rem !important;
+  }
+
+  .listList {
+    font-size: 1.125rem !important;
+  }
+
+  input[type="text"] {
+    font-size: 1.25rem !important;
   }
 }
